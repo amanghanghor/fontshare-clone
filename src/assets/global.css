@@ -1,0 +1,117 @@
+/* ========== Fonts =========== */
+
+@font-face {
+  src: url("./fonts/passenger-sans/PassengerSans-Regular.ttf");
+  font-family: "passengerSans-regular";
+}
+
+@font-face {
+  src: url("./fonts/passenger-sans/PassengerSans-Medium.ttf");
+  font-family: "passengerSans-medium";
+}
+
+@font-face {
+  src: url("./fonts/passenger-sans/PassengerSans-Light.ttf");
+  font-family: "passengerSans-light";
+}
+
+@font-face {
+  src: url("./fonts/passenger-sans/PassengerSans-Bold.ttf");
+  font-family: "passengerSans-bold";
+}
+
+@font-face {
+  src: url("./fonts/passenger-sans/PassengerSans-Semibold.ttf");
+  font-family: "passengerSans-semiBold";
+}
+
+@font-face {
+  src: url("./fonts/passenger-sans/PassengerSans-Black.ttf");
+  font-family: "passengerSans-black";
+}
+
+:root {
+  --thumbBG: rgba(85, 85, 85, 0.5);
+  --scrollbarBG: transparent;
+  --thumbFocusBG: rgb(255, 255, 255);
+  --font-medium: "passengerSans-medium";
+  --font-regular: "passengerSans-regular";
+  --font-light: "passengerSans-light";
+  --font-bold: "passengerSans-bold";
+  --font-semiBold: "passengerSans-semiBold";
+  --font-black: "passengerSans-black";
+
+  /* padding */
+  --padding-layout: 40px;
+
+  /* header */
+  --height-header: 160px;
+}
+
+@media screen and (max-width: 1278px) {
+  :root {
+    /* padding */
+    --padding-layout: 20px;
+
+    /* header */
+    --height-header: 140px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    /* header */
+    --height-header: 60px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+
+body {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: var(--font-medium);
+  scrollbar-gutter: stable both-edges;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+*::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 0;
+  border: 0;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--thumbFocusBG);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
